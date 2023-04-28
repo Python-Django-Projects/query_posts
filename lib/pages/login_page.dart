@@ -95,15 +95,19 @@ class LoginPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
-                  Text('Not a memeber?',style: TextStyle(fontSize: 15),),
+                  Text(
+                    'Not a memeber?',
+                    style: TextStyle(fontSize: 15),
+                  ),
                   SizedBox(width: 10),
                   Text(
                     'Register now',
                     style: TextStyle(
-                      wordSpacing: 1,
-                      letterSpacing: 1.5,
-                      fontSize: 15,
-                        color: Colors.blue, fontWeight: FontWeight.bold),
+                        wordSpacing: 1,
+                        letterSpacing: 1.5,
+                        fontSize: 15,
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold),
                   )
                 ],
               )
