@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
+import 'package:query_posts/auth/forgot_password.dart';
+import 'package:query_posts/auth/register_page.dart';
 import 'package:query_posts/components/my_button.dart';
 import 'package:query_posts/components/my_textfield.dart';
 import 'package:query_posts/components/squre_tile.dart';
@@ -50,9 +53,11 @@ class LoginPage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text(
-                      'Forgot Password?',
-                      style: TextStyle(color: Colors.grey[600]),
+                    TextButton(
+                      onPressed: () {
+                        Get.to(ForgotPassword());
+                      },
+                      child: Text('Forgot password'),
                     ),
                   ],
                 ),
@@ -91,23 +96,23 @@ class LoginPage extends StatelessWidget {
                   SqureTile(imagePath: 'assets/images/apple.jpeg'),
                 ],
               ),
-              SizedBox(height: 40),
+              Expanded(child: SizedBox(height: double.infinity)),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   Text(
                     'Not a memeber?',
                     style: TextStyle(fontSize: 15),
                   ),
                   SizedBox(width: 10),
-                  Text(
-                    'Register now',
-                    style: TextStyle(
-                        wordSpacing: 1,
-                        letterSpacing: 1.5,
-                        fontSize: 15,
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold),
+                  TextButton(
+                    onPressed: () {
+                      Get.to(Registration());
+                    },
+                    child: Text(
+                      'Register now',
+                      style: TextStyle(fontSize: 15, letterSpacing: 1),
+                    ),
                   )
                 ],
               )
